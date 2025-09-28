@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Daily Shop — Apparel & Lifestyle</title>
+  <meta name="description" content="Daily Shop — Tienda de indumentaria premium. Demo profesional: catálogo, filtros, carrito y checkout (sandbox)." />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Swiper (carrusel) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div  class="container header-grid">
+      <div class="brand">
+        <a href="#" class="logo" aria-label="Daily Shop">
+          <svg width="40" height="40" viewBox="0 0 100 100" aria-hidden="true">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1">
+                <stop offset="0" stop-color="#111827"/>
+                <stop offset="1" stop-color="#ff6b9a"/>
+              </linearGradient>
+            </defs>
+            <rect width="100" height="100" rx="14" fill="url(#g1)"></rect>
+            <text x="50" y="58" text-anchor="middle" font-size="48" font-family="Verdana" fill="#fff" font-weight="700">DS</text>
+          </svg>
+        </a>
+        <div class="brand-info">
+          <a href="#" class="brand-title">Daily Shop</a>
+          <span class="brand-sub">Apparel & Lifestyle</span>
+        </div>
+      </div>
+      
+      <div class="header-actions">
+        <div class="search-wrap" role="search">
+          <input id="searchInput" type="search" placeholder="Buscar productos, p. ej. 'buzo'…" aria-label="Buscar productos">
+        </div>
+
+        <button id="favoritesBtn" class="icon-btn" title="Favoritos (demo)" aria-label="Favoritos">
+          ♥
+        </button>
+
+        <button id="cartToggle" class="cart-btn" aria-haspopup="dialog" aria-controls="cartSidebar" aria-expanded="false">
+          <span class="cart-ico">🛒</span>
+          <span id="cartCount" class="cart-count" aria-hidden="true">0</span>
+        </button>
+
+        <button id="hamburger" class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+      </div>
+    </div>
+
+    <!-- nav mobile & desktop -->
+    <nav class="main-nav">
+      <a href="#hero">Inicio</a>
+      <a href="#collections">Colecciones</a>
+      <a href="#catalog">Catálogo</a>
+      <a href="#contact">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Mobile side panel -->
+  <div id="mobilePanel" class="mobile-panel" aria-hidden="true">
+  <button id="mobileClose" class="mobile-close" aria-label="Cerrar menú">✕</button>
+  <nav class="mobile-nav">
+    <a href="#hero">Inicio</a>
+    <a href="#collections" >Colecciones</a>
+    <a href="#catalog" >Catálogo</a>
+    <a href="#contact" >Contacto</a>
+  </nav>
+</div>
+<div id="overlay" class="overlay" hidden></div>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <h1 class="hero-title">Daily Shop — Vestí tu día.</h1>
+          <p class="hero-lead">Colecciones sostenibles, cortes premium y drops limitados. Explora moda pensada para la vida diaria.</p>
+          <div class="hero-ctas">
+            <a href="#catalog" class="btn-primary">Comprar ahora</a>
+            <a href="#collections" class="btn-outline">Explorar colecciones</a>
+          </div>
+          <ul class="trust-list">
+            <li>Envío internacional</li>
+            <li>Garantía 30 días</li>
+            <li>Pago seguro</li>
+          </ul>
+        </div>
+
+        <!-- Carousel destacado -->
+        <div class="hero-right">
+          <div class="swiper hero-swiper" aria-label="Carrusel de producto destacado">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=900&q=80" alt="Look diario 1"></div>
+              <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80" alt="Look diario 2"></div>
+              <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1520975698514-1f6668b6a0c6?auto=format&fit=crop&w=900&q=80" alt="Look diario 3"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Collections -->
+    <section id="collections" class="section container">
+      <h2 class="section-title">Colecciones destacadas</h2>
+      <p class="section-sub">Curadas para cada estilo - cápsulas limitadas y best sellers.</p>
+
+      <div class="collections-grid">
+        <article class="collection-card">
+          <img src="https://images.unsplash.com/photo-1520975698514-1f6668b6a0c6?auto=format&fit=crop&w=800&q=80" alt="Colección Urban">
+          <div class="col-meta">
+            <h3>Urban Essentials</h3>
+            <p>Basics premium para uso diario</p>
+            <a href="#catalog?cat=urban" class="card-cta">Ver colección</a>
+          </div>
+        </article>
+
+        <article class="collection-card">
+          <img src="https://images.unsplash.com/photo-1520975685091-3e0b6b3d5c0c?auto=format&fit=crop&w=800&q=80" alt="Colección Weekend">
+          <div class="col-meta">
+            <h3>Weekend Vibes</h3>
+            <p>Looks relajados y estilosos</p>
+            <a href="#catalog?cat=weekend" class="card-cta">Ver colección</a>
+          </div>
+        </article>
+
+        <article class="collection-card">
+          <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=800&q=80" alt="Colección Luxe">
+          <div class="col-meta">
+            <h3>Luxe Line</h3>
+            <p>Edición limitada — materiales premium</p>
+            <a href="#catalog?cat=luxe" class="card-cta">Ver colección</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Catalog / Filters -->
+    <section id="catalog" class="catalog section container">
+      <div class="catalog-grid">
+        <aside class="filters" aria-label="Filtros de productos">
+          <div class="filter-block">
+            <h4>Buscar</h4>
+            <input id="filterSearch" type="search" placeholder="Buscar por nombre, código..." />
+          </div>
+
+          <div class="filter-block">
+            <h4>Categoría</h4>
+            <select id="filterCategory">
+              <option value="">Todas</option>
+            </select>
+          </div>
+
+          <div class="filter-block">
+            <h4>Talla</h4>
+            <div class="sizes" id="filterSizes"></div>
+          </div>
+
+          <div class="filter-block">
+            <h4>Color</h4>
+            <div class="colors" id="filterColors"></div>
+          </div>
+
+          <div class="filter-block">
+            <h4>Precio</h4>
+            <input id="priceMin" type="number" placeholder="Min" min="0" /> — 
+            <input id="priceMax" type="number" placeholder="Max" min="0" />
+          </div>
+
+          <div class="filter-actions">
+            <button id="applyFilters" class="btn-small">Aplicar</button>
+            <button id="resetFilters" class="btn-link">Reset</button>
+          </div>
+        </aside>
+
+        <div class="products-area">
+          <div class="products-toolbar">
+            <div class="results-info" id="resultsInfo">Mostrando <span id="resultsCount">0</span> productos</div>
+            <div class="sort-wrap">
+              <label for="sortSelect">Ordenar</label>
+              <select id="sortSelect">
+                <option value="featured">Destacados</option>
+                <option value="price-asc">Precio: bajo a alto</option>
+                <option value="price-desc">Precio: alto a bajo</option>
+                <option value="new">Nuevos</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="productsGrid" class="products-grid" aria-live="polite"></div>
+
+          <div class="pagination" id="pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About / Brand story -->
+    <section id="about" class="section container">
+      <div class="about-grid">
+        <div>
+          <h2>Nuestra filosofía</h2>
+          <p>Daily Shop nace para ofrecer prendas responsables, con foco en calidad y diseño atemporal. Seleccionamos materiales duraderos y trabajamos con fábricas que respetan estándares laborales.</p>
+          <ul>
+            <li>Transparencia en materiales</li>
+            <li>Producción responsable</li>
+            <li>Devoluciones sencillas</li>
+          </ul>
+        </div>
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1520975698514-1f6668b6a0c6?auto=format&fit=crop&w=1200&q=80" alt="Sobre Daily Shop">
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section container">
+      <h2>Contacto & Soporte</h2>
+      <p>¿Tenés dudas? Escríbenos por WhatsApp o envianos un email.</p>
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:contact@dailyshop.example">contact@dailyshop.example</a>
+        <a class="contact-card" href="https://wa.me/5493512955491" target="_blank">WhatsApp: +54 9 351 295 5491</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Cart Sidebar -->
+  <aside id="cartSidebar" class="cart-sidebar" role="dialog" aria-modal="true" aria-label="Carrito de compras" hidden>
+    <div class="cart-header">
+      <h3>Tu carrito</h3>
+      <button id="cartClose" class="close-btn" aria-label="Cerrar carrito">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items" aria-live="polite"></div>
+    <div class="cart-footer">
+      <div class="cart-summary">
+        <div>Subtotal</div>
+        <div id="cartSubtotal">$0</div>
+      </div>
+      <button id="checkoutBtn" class="btn-primary full">Pagar (Demo)</button>
+      <button id="checkoutMP" class="btn-outline full">Pagar con Mercado Pago (Sandbox)</button>
+    </div>
+  </aside>
+
+  <!-- Product Quick View Modal -->
+  <dialog id="productModal" class="product-modal" aria-hidden="true">
+    <button id="modalClose" class="modal-close" aria-label="Cerrar">✕</button>
+    <div class="modal-content">
+      <div class="modal-gallery" id="modalGallery"></div>
+      <div class="modal-info" id="modalInfo"></div>
+    </div>
+  </dialog>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <strong>Daily Shop</strong>
+          <p>© <span id="year"></span> Daily Shop. Todos los derechos reservados.</p>
+        </div>
+        <div>
+          <small>Soporte: contact@dailyshop.example</small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
