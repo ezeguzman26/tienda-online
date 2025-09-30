@@ -172,6 +172,10 @@ function initUI(){
   });
 
   // Catalog controls
+
+  
+
+
   $("#filterSearch")?.addEventListener("input", (e)=> {
     state.filters.q = e.target.value.trim();
   });
