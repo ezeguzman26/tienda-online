@@ -228,7 +228,7 @@ body{
 
 @media (max-width: 768px) {
   .search-wrap input, .search-wrap input::placeholder{
-  padding:10px 12px; border-radius:999px; width:210px;
+  padding:10px 12px; border-radius:999px; width:190px;
   outline:none;
 }
   .divide {
@@ -466,5 +466,6 @@ body{
 .lupa{
   padding-left: 30px;
 }
+
 
 
