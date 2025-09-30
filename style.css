@@ -57,16 +57,18 @@ body{
 .brand-title{ font-weight:700; color:var(--surface); text-decoration:none; }
 .brand-sub{ font-size:12px; color:var(--muted); }
 
+
+
 /* Header actions */
-.header-actions{ display:flex; gap:10px; align-items:center; }
+.header-actions{ display:flex; gap:10px; align-items:center;}
 .search-wrap input, .search-wrap input::placeholder{
-  padding:8px 12px; border-radius:999px; border:1px solid rgba(15,23,36,0.06); width:220px;
+  padding:8px 12px; border-radius:999px; width:800px;
   outline:none;
 }
 .search-wrap input:focus{ box-shadow:var(--focus) }
 
 .icon-btn{ background:none; border:1px solid rgba(15,23,36,0.04); padding:8px 10px; border-radius:10px; cursor:pointer; }
-.cart-btn{ display:flex; align-items:center; gap:8px; background:linear-gradient(90deg,var(--accent),var(--accent-2)); color:white; border:none; padding:8px 12px; border-radius:12px; cursor:pointer; position:relative; }
+.cart-btn{ display:flex; align-items:center; gap:8px; background:linear-gradient(90deg,var(--accent),var(--accent-2)); color:white; border:none; padding:8px 12px; border-radius:12px; cursor:pointer; position:relative;  }
 .cart-count{ position:absolute; top:-6px; right:-6px; background:#111; color:#fff; padding:4px 7px; border-radius:999px; font-size:12px; }
 
 /* Nav */
@@ -79,17 +81,14 @@ body{
 .hamburger span{ display:block; width:22px; height:2px; background:#111; margin:4px 0; border-radius:2px; }
 
 /* HERO */
-.hero{ padding:120px 0 40px; }
+.hero{ padding:120px 0 40px; text-align: center; }
 .hero-grid{ display:grid; grid-template-columns:1fr; gap:20px; align-items:center; }
-.hero-title{ font-size:2rem; margin-bottom:8px; color:var(--surface); }
-.hero-lead{ color:var(--muted); margin-bottom:16px; }
+.hero-title{ font-size:2rem; margin-bottom:8px; color:var(--surface);}
+.hero-lead{ color:var(--muted); margin-bottom:16px;  }
 .hero-ctas{ display:flex; gap:12px; flex-wrap:wrap; margin-bottom:12px; }
 .btn-primary{ background: linear-gradient(90deg,var(--accent),var(--accent-2)); color:#fff; padding:12px 18px; border-radius:10px; text-decoration:none; font-weight:700; box-shadow:var(--shadow); border:none; display:inline-block; }
 .btn-outline{ padding:12px 18px; border-radius:10px; text-decoration:none; color:var(--surface); border:1px solid rgba(15,23,36,0.06); }
 
-/* Swiper hero */
-.hero-right .swiper { border-radius:14px; overflow:hidden; box-shadow:var(--shadow); }
-.hero-right img{ width:100%; display:block; height:260px; object-fit:cover; }
 
 /* Collections */
 .section{ padding:40px 0; }
@@ -160,7 +159,7 @@ body{
 
 /* Responsive */
 @media (min-width: 900px){
-  .hero-grid{ grid-template-columns:1fr 420px; }
+ 
   .catalog-grid{ grid-template-columns:300px 1fr; }
   .collections-grid{ grid-template-columns:repeat(3,1fr); }
   .modal-content{ grid-template-columns:1fr 420px; }
@@ -169,8 +168,7 @@ body{
   .main-nav{ display:none; }
   .hamburger{ display:block; }
   .collections-grid{ grid-template-columns:repeat(2,1fr); }
-  .products-grid{ grid-template-columns:repeat(2,minmax(160px,1fr)); }
-  .hero-right img{ height:180px }
+
 }
 @media (max-width:520px){
   .collections-grid{ grid-template-columns:1fr; }
@@ -223,4 +221,248 @@ body{
   inset: 0;
   background: rgba(0,0,0,0.4);
   z-index: 1400;
+}
+/* --------------------------
+   Responsive mejorado para móviles
+--------------------------- */
+
+@media (max-width: 768px) {
+  .search-wrap input, .search-wrap input::placeholder{
+  padding:8px 12px; border-radius:999px; width:282px;
+  outline:none;
+}
+  .divide {
+  border: 0;
+  height: 4px;
+  width: 300px; /* o el ancho que quieras */
+  background-color: #ff6b9a; /* verde corporativo */
+  margin: 40px auto; /* centrado y con espacio arriba y abajo */
+  border-radius: 2px; /* bordes redondeados */
+}
+  .search-wrap input:focus{ box-shadow:var(--focus) }
+
+  /* Ajuste del contenedor general */
+  .container {
+    width: 95%;
+    padding: 4 10px;
+    
+  }
+
+  /* Hero */
+  .hero {
+    padding: 100px 0 30px;
+    text-align: center;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+
+  /* Filtros */
+  .catalog-grid {
+    grid-template-columns: 1fr; /* filtros arriba, productos abajo */
+    gap: 12px;
+  }
+
+  .filters {
+    position: static;
+    width: 100%;
+    max-height: none;
+    border: 1px solid rgba(15, 23, 36, 0.06);
+    box-shadow: none;
+  }
+
+  /* Productos */
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 14px;
+  }
+
+  .product-card {
+    width: 100%;
+  }
+
+  .product-thumb {
+    height: 200px;
+  }
+
+  /* Toolbars */
+  .products-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Sidebar del carrito */
+  .cart-sidebar {
+    width: 100%;
+    max-width: 100%;
+  }
+  .hero-ctas {
+  display: flex;
+ 
+  align-items: center; /* centrados horizontalmente */
+  justify-content: center;
+  gap: 15px; /* espacio entre botones */
+  margin-top: 25px;
+  text-align: center;
+  }
+
+}
+
+.hero-ctas .btn {
+  width: 200px; /* tamaño consistente */
+  text-align: center;
+}
+
+
+.trust-list {
+  list-style: none; /* quitamos los bullets estándar */
+  padding: 0;
+  margin: 20px 0;
+  
+}
+
+
+.trust-list{
+  display: flex;
+  align-items: center; /* alinea ícono y texto */
+  gap: 8px; /* espacio uniforme entre ícono y texto */
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #333; /* o el color que uses */
+}
+
+/* Si usás emojis, no necesitás pseudo-elementos.
+   Pero si querés usar bullets personalizados: */
+.trust-list li::before {
+  content: "•";
+  color: #ff6b9a; /* color del punto */
+  font-weight: bold;
+  margin-right: 8px;
+  
+}
+
+.divide {
+  border: 0;
+  height: 4px;
+  width: 400px; /* o el ancho que quieras */
+  background-color: #ff6b9a; /* verde corporativo */
+  margin: 40px auto; /* centrado y con espacio arriba y abajo */
+  border-radius: 2px; /* bordes redondeados */
+}
+
+/* Centrar los botones del hero en todas las pantallas */
+.hero-ctas {
+  display: flex;
+  justify-content: center;   /* centra horizontal */
+  align-items: center;       /* centra vertical si hay altura */
+  gap: 16px;                 /* separación entre botones */
+  margin-top: 20px;          /* espacio arriba */
+  flex-wrap: wrap;           /* permite que se acomoden si no entran */
+  text-align: center;
+}
+
+.hero-ctas .btn {
+  text-align: center;
+}
+.trust-list{
+  display: flex;
+  justify-content: center;   /* centra horizontal */
+  align-items: center;       /* centra vertical si hay altura */
+  gap: 16px;                 /* separación entre botones */
+  margin-top: 20px;          /* espacio arriba */
+  flex-wrap: wrap;           /* permite que se acomoden si no entran */
+  text-align: center;
+  padding-top: 30px;
+}
+/* 🔹 Menú inferior fijo */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #111;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 1000;
+}
+
+/* 🔹 Links e íconos */
+.bottom-nav a,
+.bottom-nav .cart-center {
+  flex: 1;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 0;
+  position: relative;
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 65px;
+}
+
+/* 🔹 Texto debajo del ícono */
+.bottom-nav a span,
+.bottom-nav .cart-center span:not(.cart-count) {
+  font-size: 0.75rem;
+  margin-top: 2px;
+}
+
+/* 🔹 Línea separadora vertical */
+.bottom-nav a::after,
+.bottom-nav .cart-center::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  right: 0;
+  height: 60%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* 🔹 Quitamos la línea al último elemento */
+.bottom-nav a:last-of-type::after {
+  display: none;
+}
+
+/* 🔹 Carrito centrado */
+.cart-center {
+  position: relative;
+  cursor: pointer;
+}
+
+/* 🔹 Contador del carrito */
+.cart-count {
+  position: absolute;
+  top: 5px;
+  right: 28%;
+  background: #ff6b9a;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+/* ===== Espacio para que el footer no quede tapado ===== */
+.page-end-space {
+  height: 60px; /* un poco más que la barra inferior */
+}
+
+.lupa{
+  padding-left: 80px;
 }
