@@ -347,7 +347,7 @@ body{
 .divide {
   border: 0;
   height: 4px;
-  width: 400px; /* o el ancho que quieras */
+  width: 300px; /* o el ancho que quieras */
   background-color: #ff6b9a; /* verde corporativo */
   margin: 40px auto; /* centrado y con espacio arriba y abajo */
   border-radius: 2px; /* bordes redondeados */
@@ -464,5 +464,6 @@ body{
 }
 
 .lupa{
-  padding-left: 80px;
+  padding-left: 30px;
 }
+
