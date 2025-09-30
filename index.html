@@ -10,66 +10,45 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
-  <header class="site-header" role="banner">
-    <div  class="container header-grid">
-      <div class="brand">
-        <a href="#" class="logo" aria-label="Daily Shop">
-          <svg width="40" height="40" viewBox="0 0 100 100" aria-hidden="true">
-            <defs>
-              <linearGradient id="g1" x1="0" x2="1">
-                <stop offset="0" stop-color="#111827"/>
-                <stop offset="1" stop-color="#ff6b9a"/>
-              </linearGradient>
-            </defs>
-            <rect width="100" height="100" rx="14" fill="url(#g1)"></rect>
-            <text x="50" y="58" text-anchor="middle" font-size="48" font-family="Verdana" fill="#fff" font-weight="700">DS</text>
-          </svg>
-        </a>
-        <div class="brand-info">
-          <a href="#" class="brand-title">Daily Shop</a>
-          <span class="brand-sub">Apparel & Lifestyle</span>
-        </div>
-      </div>
-      
-      <div class="header-actions">
-        <div class="search-wrap" role="search">
-          <input id="searchInput" type="search" placeholder="Buscar productos, p. ej. 'buzo'…" aria-label="Buscar productos">
-        </div>
-
-        <button id="favoritesBtn" class="icon-btn" title="Favoritos (demo)" aria-label="Favoritos">
-          ♥
-        </button>
-
-        <button id="cartToggle" class="cart-btn" aria-haspopup="dialog" aria-controls="cartSidebar" aria-expanded="false">
-          <span class="cart-ico">🛒</span>
-          <span id="cartCount" class="cart-count" aria-hidden="true">0</span>
-        </button>
-
-        <button id="hamburger" class="hamburger" aria-label="Abrir menú" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+  <header class="site-header">
+  <div class="container header-grid">
+    <div class="brand">
+      <a href="#" class="logo" aria-label="Daily Shop">
+        <svg width="40" height="40" viewBox="0 0 100 100" aria-hidden="true">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop offset="0" stop-color="#111827"/>
+              <stop offset="1" stop-color="#ff6b9a"/>
+            </linearGradient>
+          </defs>
+          <rect width="100" height="100" rx="14" fill="url(#g1)"></rect>
+          <text x="50" y="58" text-anchor="middle" font-size="48" font-family="Verdana" fill="#fff" font-weight="700">DS</text>
+        </svg>
+      </a>
+      <div class="brand-info">
+        <a href="#" class="brand-title">Daily Shop</a>
+        <span class="brand-sub">Apparel & Lifestyle</span>
       </div>
     </div>
+     <p class="lupa">🔎</p>
+    <div class="search-wrap">
+      <input id="searchInput" type="search" 
+      placeholder="Buscar productos..." aria-label="Buscar">
+    </div>
+  </div>
+</header>
 
-    <!-- nav mobile & desktop -->
-    <nav class="main-nav">
-      <a href="#hero">Inicio</a>
-      <a href="#collections">Colecciones</a>
-      <a href="#catalog">Catálogo</a>
-      <a href="#contact">Contacto</a>
-    </nav>
-  </header>
+<!-- Nav inferior fijo -->
+<nav class="bottom-nav">
+  <a href="#hero">🏠<span>Inicio</span></a>
+  <a href="#collections">🧥<span>Colecciones</span></a>
+  <button id="cartToggle" class="cart-center" aria-haspopup="dialog">
+    🛒<span id="cartCount" class="cart-count">0</span>
+  </button>
+  <a href="#catalog">🛍️<span>Catálogo</span></a>
+  <a href="#contact">📞<span>Contacto</span></a>
+</nav>
 
-  <!-- Mobile side panel -->
-  <div id="mobilePanel" class="mobile-panel" aria-hidden="true">
-  <button id="mobileClose" class="mobile-close" aria-label="Cerrar menú">✕</button>
-  <nav class="mobile-nav">
-    <a href="#hero">Inicio</a>
-    <a href="#collections" >Colecciones</a>
-    <a href="#catalog" >Catálogo</a>
-    <a href="#contact" >Contacto</a>
-  </nav>
-</div>
 <div id="overlay" class="overlay" hidden></div>
 
   <main>
@@ -80,8 +59,8 @@
           <h1 class="hero-title">Daily Shop — Vestí tu día.</h1>
           <p class="hero-lead">Colecciones sostenibles, cortes premium y drops limitados. Explora moda pensada para la vida diaria.</p>
           <div class="hero-ctas">
-            <a href="#catalog" class="btn-primary">Comprar ahora</a>
-            <a href="#collections" class="btn-outline">Explorar colecciones</a>
+            <a href="#catalog" class=" btn btn-primary">Comprar ahora</a>
+            <a href="#collections" class="btn btn-outline">Explorar colecciones</a>
           </div>
           <ul class="trust-list">
             <li>Envío internacional</li>
@@ -91,18 +70,12 @@
         </div>
 
         <!-- Carousel destacado -->
-        <div class="hero-right">
-          <div class="swiper hero-swiper" aria-label="Carrusel de producto destacado">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=900&q=80" alt="Look diario 1"></div>
-              <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80" alt="Look diario 2"></div>
-              <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1520975698514-1f6668b6a0c6?auto=format&fit=crop&w=900&q=80" alt="Look diario 3"></div>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
+       
         </div>
       </div>
+       
     </section>
+    <hr class="divide">
 
     <!-- Collections -->
     <section id="collections" class="section container">
@@ -141,6 +114,7 @@
 
     <!-- Catalog / Filters -->
     <section id="catalog" class="catalog section container">
+      <h2 class="section-title">Nuestro Catalogo</h2>
       <div class="catalog-grid">
         <aside class="filters" aria-label="Filtros de productos">
           <div class="filter-block">
@@ -270,5 +244,7 @@
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
+  <div class="page-end-space"></div>
+
 </body>
 </html>
